@@ -1,0 +1,192 @@
+body {
+    background-color: rgb(32, 32, 32);
+    color: rgb(230, 230, 230);
+    text-align: center;
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
+    font-size: 0.7em;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    line-height: 1em;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.1em;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    padding: 0;
+    margin: 10px 0 2px 0;
+}
+
+.box>.box-item #fixed {
+    width: 94px;
+    height: 90px;
+    line-height: 90px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.box {
+    width: 293px;
+    margin: 1% auto;
+}
+
+.box .box-item {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.box .box-item>.box-item-cell {
+    border: 2px solid rgb(230, 230, 230);
+    width: 94px;
+    height: 90px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.btn-link {
+    background: darksalmon;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+    width: 100px;
+    vertical-align: top;
+    position: relative;
+    top: 30px;
+    /* right: 30px; */
+}
+
+.score-board {
+    margin: 7% auto;
+}
+
+.th-list {
+    display: inline-block;
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.score-list {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-right: 30px;
+    padding-left: 35px;
+}
+
+.players {
+    position: relative;
+    top: 55px;
+}
+
+#restart {
+    margin-right: 10px;
+    width: 1em;
+    height: 0.9em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.x {
+    color: darksalmon;
+    position: relative;
+    top: -30px;
+    font-size: 9.2em;
+    cursor: default;
+}
+
+.o {
+    color: #72ddb9;
+    position: relative;
+    top: -27px;
+    font-size: 8em;
+    cursor: default;
+}
+
+
+/* modal background */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* modal content */
+
+.modal-content {
+    background-color: rgb(240, 240, 240);
+    color: rgb(32, 32, 32);
+    font-size: 2em;
+    font-weight: bold;
+    /* 16 % from the top and centered */
+    margin: 16% auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 380px;
+    max-width: 80%;
+}
+
+.modal-content p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* modal button for play */
+
+#okBtn {
+    border-radius: 5px;
+    width: 60px;
+    margin-top: 15px;
+    padding: 4px;
+    background: rgb(62, 217, 80);
+    color: #fff;
+}
+
+
+/* close button for modal dialog */
+
+.close {
+    color: rgb(170, 170, 170);
+    float: right;
+    position: relative;
+    top: -25px;
+    right: -10px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.win-color {
+    background-color: rgb(240, 240, 240);
+}

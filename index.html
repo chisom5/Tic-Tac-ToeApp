@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initialize()">
+    <h1>Tic-Tac-Toe</h1>
+
+    <!-- Game interface -->
+    <div class="box">
+
+        <div class="box-item">
+
+            <!-- Frist Row -->
+            <div class="box-item-cell" id="cell0" onclick="cellClicked(this.id)" id="fixed"></div>
+
+            <div class="box-item-cell" id="cell1" onclick="cellClicked(this.id)" id="fixed"></div>
+
+            <div class="box-item-cell" id="cell2" onclick="cellClicked(this.id)" id="fixed"></div>
+
+            <!-- Second Row -->
+            <div class="box-item-cell" id="cell3" onclick="cellClicked(this.id)" id="fixed"></div>
+
+            <div class="box-item-cell" id="cell4" onclick="cellClicked(this.id)" id="fixed"></div>
+
+            <div class="box-item-cell" id="cell5" onclick="cellClicked(this.id)" id="fixed"></div>
+
+            <!-- Third Row -->
+            <div class="box-item-cell" id="cell6" onclick="cellClicked(this.id)" id="fixed"></div>
+
+            <div class="box-item-cell" id="cell7" onclick="cellClicked(this.id)" id="fixed"></div>
+
+            <div class="box-item-cell" id="cell8" onclick="cellClicked(this.id)" id="fixed"></div>
+        </div>
+
+    </div>
+
+    <div>
+        <!-- Reset Game -->
+        <a class="btn-link" id="restart" href="" onclick="restartGame(true)">Reset Game</a>
+
+        <!-- Settings -->
+        <a class="btn-link" id="settings" href="" onclick="getSettings()">Settings</a>
+    </div>
+
+    <!-- Dailog for getting feedback from the user -->
+    <div id="feedback" class="modal">
+
+        <div class="modal-content">
+            <p id="questionText"></p>
+            <p><button id="yesBtn">Yes</button>&nbsp;<button id="noBtn">No</button></p>
+        </div>
+
+    </div>
+
+    <!-- The modal dialog for announcing the winner -->
+    <div id="winAnnounce" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('winAnnounce')">&times;</span>
+            <p id="winText"></p>
+        </div>
+    </div>
+
+    <!-- Settings dialog -->
+    <div id="settingsDlg" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h2>How would you like to play?</h2>
+            <h3>Difficulty:</h3>
+            <label>
+                <input type="radio" name="difficulty" id="r0" value="0">Easy&nbsp;</label>
+            <label>
+                 <input type="radio" name="difficulty" id="r1" value="0">Medium&nbsp;</label>
+
+            <label>
+                <input type="radio" name="difficulty" id="r2" value="1" checked>Hard</label>
+
+            <br>
+
+            <h3>Play as:</h3>
+            <label>
+                <input type="radio" name="player" id="rx" value="x" checked>X (go first)&nbsp;</label>
+            <label>
+                <input type="radio" name="player" id="ro" value="o">O
+                <br>
+            </label>
+            <p>
+                <button id="okBtn" onclick="getOptions()">Play</button>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Score Board -->
+    <div class="score-board">
+
+        <div class="score">
+
+            <div class="th-list">Computer</div>
+            <div class="th-list" style="padding-right:20px;padding-left:20px">Draws</div>
+            <div class="th-list">Player</div>
+
+        </div>
+
+        <div class="score">
+
+            <div class="score-list" id="computer-score">0</div>
+            <div class="score-list" style="padding-right:20px" id="tie-score">0</div>
+            <div class="score-list" id="player-score">0</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Section for  -->
+    <script src="app.js"></script>
+</body>
+
+</html>
